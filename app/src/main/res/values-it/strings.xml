@@ -1,0 +1,46 @@
+<resources>
+
+    <string name="app_name">ToEat</string>
+    <string name="welcome">Benvenuto</string>
+    <string name="newHere"> </string>
+    <string name="loggedIn">Login effettuato!</string>
+    <string name="enter">Invia</string>
+    <string name="InvalidLogin">login non valido!</string>
+    <string name="birthYear">Anno di nascita:</string>
+    <string name="register">Non hai un account? Registrati</string>
+    <string name="sign_up">Registrati</string>
+    <string name="age">età</string>
+    <string name="error">Errore!</string>
+    <string name="error_invalid_email">Email non valida!</string>
+    <string name="error_invalid_name">Nome non valido!</string>
+    <string name="error_invalid_password">Password non valida!</string>
+    <string name="name">nome</string>
+    <string name="title_activity_add_review">Nuova recensione</string>
+    <string name="title_activity_local_detail">Dettagli locale</string>
+    <string name="title_activity_new_local">Nuovo locale</string>
+    <string name="title_activity_user_profile">Profilo utente</string>
+    <string name="title_activity_listlocal">Lista locali</string>
+    <string name="localName">Nome:</string>
+    <string name="money">spesa</string>
+    <string name="type">tipo</string>
+    <string name="newLocalDetail">Inserisci i dati del nuovo locale</string>
+    <string name="localType">Tipo:</string>
+    <string name="localMoney">Spesa:</string>
+    <string name="address">indirizzo</string>
+    <string name="localAddress">Indirizzo:</string>
+    <string name="contact">contatto</string>
+    <string name="hours">orari</string>
+    <string name="localContact">Contatti:</string>
+    <string name="localHours">Orari:</string>
+    <string name="reviews">RECENSIONI</string>
+    <string name="addReview">NUOVA RECENSIONE</string>
+    <string name="says">dice:</string>
+    <string name="addComment">Aggiungi un commento</string>
+    <string name="rate">Vota questo locale!</string>
+    <string name="title_activity_review_detail">Dettagli recensione</string>
+    <string name="title_login_main">Login</string>
+    <string name="fillFields">Compilare tutti i campi</string>
+    <string name="error_invalid_age">Età non valida!</string>
+    <string name="welcomeToast">Benvenuto fra noi </string>
+
+</resources>

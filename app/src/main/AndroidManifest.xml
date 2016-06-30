@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.svilupposw.ToEat" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="ToEat"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar" >
+        <activity
+            android:name=".LoginMainActivity"
+            android:label="@string/title_activity_login_main"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListLocalActivity"
+            android:label="@string/title_activity_listlocal"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".NewLocalActivity"
+            android:label="@string/title_activity_new_local"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".LocalDetailActivity"
+            android:label="@string/title_activity_local_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AddReviewActivity"
+            android:label="@string/title_activity_add_review"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ReviewDetailActivity"
+            android:label="@string/title_activity_review_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:label="@string/title_activity_user_profile"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RegistrationMainActivity"
+            android:label="@string/title_activity_login_main"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+    </application>
+
+</manifest>

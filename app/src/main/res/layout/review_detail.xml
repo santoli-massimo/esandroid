@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ReviewDetailActivity"
+    android:background="#446aca"
+    android:weightSum="1">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        ></include>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/localName"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25dp"
+            android:textColor="@color/titles"
+            android:hint="localName"
+            android:textStyle="bold"
+            android:enabled="false"
+            android:gravity="center_vertical|center_horizontal"
+            android:height="25dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/localType"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            android:textColor="@color/titles"
+            android:hint="type"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="143dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Author:"
+                    android:id="@+id/author"
+                    android:textStyle="bold"
+                    android:textColor="@color/lightText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Comment:"
+                    android:id="@+id/comment"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/lightText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Rating:"
+                    android:id="@+id/rating"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/lightText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="244dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reviewAuthor"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="15dp"
+                    android:textColor="#ffffff"
+                    android:hint="author"
+                    android:layout_marginTop="3dp"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reviewComment"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="15dp"
+                    android:textColor="#ffffff"
+                    android:hint="comment"
+                    android:layout_marginTop="13dp"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:layout_marginLeft="10dp" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBar"
+                    android:progressTint="#ffd500"
+                    android:isIndicator="true"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

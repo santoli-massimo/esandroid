@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.svilupposw.ToEat.NewLocalActivity"
+    tools:showIn="@layout/activity_new_local"
+    android:weightSum="1"
+    android:background="#446aca">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView10"
+            android:text="@string/newLocalDetail"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:layout_weight="0.05" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/name"
+            android:layout_weight="0.05"
+            android:hint="@string/name"
+            android:background="#c5e1ed"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/address"
+            android:layout_weight="0.05"
+            android:hint="@string/address"
+            android:background="#c5e1ed"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/type"
+            android:layout_weight="0.05"
+            android:hint="@string/type"
+            android:background="#c5e1ed"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/money"
+            android:layout_weight="0.05"
+            android:hint="@string/money"
+            android:background="#c5e1ed"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/contact"
+            android:layout_weight="0.05"
+            android:hint="@string/contact"
+            android:background="#c5e1ed"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/hours"
+            android:layout_weight="0.05"
+            android:hint="@string/hours"
+            android:background="#c5e1ed"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

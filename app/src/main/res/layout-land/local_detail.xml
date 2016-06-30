@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.svilupposw.ToEat.LocalDetailActivity"
+    android:background="#446aca"
+    android:weightSum="1">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        ></include>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/localName"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25dp"
+            android:textColor="@color/titles"
+            android:hint="localName"
+            android:textStyle="bold"
+            android:enabled="false"
+            android:gravity="center_vertical|center_horizontal"
+            android:height="25dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/localType"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            android:textColor="@color/titles"
+            android:hint="type"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/localAddress"
+                        android:id="@+id/textView4"
+                        android:textStyle="bold"
+                        android:textColor="@color/lightText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/localMoney"
+                        android:id="@+id/textView5"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/lightText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/localContact"
+                        android:id="@+id/textView6"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/lightText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/localHours"
+                        android:id="@+id/textView7"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/lightText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="134dp"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:layout_weight="0.69">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/localAddress"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="15dp"
+                        android:textColor="@color/lightText"
+                        android:hint="address"
+                        android:layout_marginTop="3dp"
+                        android:textAlignment="textStart"
+                        android:gravity="start"
+                        android:layout_marginLeft="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/localMoney"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="15dp"
+                        android:textColor="@color/lightText"
+                        android:hint="money"
+                        android:layout_marginTop="13dp"
+                        android:textAlignment="textStart"
+                        android:gravity="start"
+                        android:layout_marginLeft="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/localContact"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="15dp"
+                        android:textColor="@color/lightText"
+                        android:hint="contact"
+                        android:layout_marginTop="13dp"
+                        android:textAlignment="textStart"
+                        android:gravity="start"
+                        android:layout_marginLeft="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/localHours"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="15dp"
+                        android:textColor="@color/lightText"
+                        android:hint="hours"
+                        android:layout_marginTop="13dp"
+                        android:textAlignment="textStart"
+                        android:gravity="start"
+                        android:layout_marginLeft="10dp" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="315dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reviews"
+                    android:id="@+id/textView8"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/titles"
+                    android:textStyle="bold"
+                    android:textAlignment="center" />
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="149dp"
+                    android:id="@+id/listLocalReview"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="5dp">
+
+                </ListView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/addReview"
+            android:id="@+id/addReview"
+            android:layout_gravity="right"
+            android:drawableLeft="@mipmap/star"
+            android:background="#060e54"
+            android:textColor="#ffd500"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
