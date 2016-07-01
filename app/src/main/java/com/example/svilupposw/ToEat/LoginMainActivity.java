@@ -3,7 +3,9 @@ package com.example.svilupposw.ToEat;
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -39,10 +41,7 @@ public class LoginMainActivity extends AppCompatActivity {
         final EditText pwd = (EditText) findViewById(R.id.textPsw);
         Button buttonRegister = (Button) findViewById(R.id.buttonRegister);
 
-        // Set colors
-//        this.changeColor();
-
-        // Creating timer
+        // Creating timer Color Backgorund
         new Timer().scheduleAtFixedRate(new TimerTask() {
             public void run() {
                 runOnUiThread( new Runnable() {
@@ -118,7 +117,7 @@ public class LoginMainActivity extends AppCompatActivity {
         final TextView email = (TextView) findViewById(R.id.textMail);
         final TextView password = (TextView) findViewById(R.id.textPsw);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final AppBarLayout actionBarXX = (AppBarLayout) findViewById(R.id.actionBarXX);
 
         final LinearLayout container = (LinearLayout) findViewById(R.id.container);
 
@@ -136,6 +135,8 @@ public class LoginMainActivity extends AppCompatActivity {
                 container.setBackgroundColor((int) animator.getAnimatedValue());
                 loginButton.setTextColor((int) animator.getAnimatedValue());
                 toolbar.setBackgroundColor((int) animator.getAnimatedValue());
+                actionBarXX.setBackgroundColor((int) animator.getAnimatedValue());
+
 //                toolbar.setBackgroundColor((int) animator.getAnimatedValue());
 
             }

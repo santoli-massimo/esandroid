@@ -11,7 +11,8 @@
     tools:context=".RegistrationMainActivity"
     tools:showIn="@layout/activity_registration_main"
     android:clickable="false"
-    android:background="#446aca">
+    android:background="#446aca"
+    android:id="@+id/container">
 
     <LinearLayout
         android:id="@+id/email_login_form"
@@ -30,7 +31,12 @@
             android:maxLines="1"
             android:singleLine="true"
             android:drawableLeft="@drawable/mail"
-            android:drawablePadding="8dp"/>
+            android:drawablePadding="8dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#ffffff"
+            android:textColorHighlight="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textColorLink="#ffffff" />
 
         <EditText
             android:id="@+id/password"
@@ -44,7 +50,12 @@
             android:maxLines="1"
             android:singleLine="true"
             android:drawableLeft="@drawable/password"
-            android:drawablePadding="8dp"/>
+            android:drawablePadding="8dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#ffffff"
+            android:textColorHighlight="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textColorLink="#ffffff" />
 
         <EditText
             android:id="@+id/nickname"
@@ -58,7 +69,12 @@
             android:maxLines="1"
             android:singleLine="true"
             android:drawableLeft="@drawable/mail"
-            android:drawablePadding="8dp"/>
+            android:drawablePadding="8dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#ffffff"
+            android:textColorHighlight="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textColorLink="#ffffff" />
 
         <EditText
             android:id="@+id/age"
@@ -72,7 +88,12 @@
             android:maxLines="1"
             android:singleLine="true"
             android:drawableLeft="@drawable/mail"
-            android:drawablePadding="8dp"/>
+            android:drawablePadding="8dp"
+            android:textColor="#ffffff"
+            android:backgroundTint="#ffffff"
+            android:textColorHighlight="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textColorLink="#ffffff" />
 
     </LinearLayout>
 </LinearLayout>

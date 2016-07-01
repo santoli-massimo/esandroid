@@ -1,14 +1,22 @@
 package com.example.svilupposw.ToEat;
 
+import android.animation.ArgbEvaluator;
+import android.animation.ValueAnimator;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.AuthData;
@@ -17,6 +25,8 @@ import com.firebase.client.FirebaseError;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class RegistrationMainActivity extends AppCompatActivity {
 
@@ -38,6 +48,17 @@ public class RegistrationMainActivity extends AppCompatActivity {
         password_editText = (EditText) findViewById(R.id.password);
         name_editText = (EditText) findViewById(R.id.nickname);
         age_editText = (EditText) findViewById(R.id.age);
+
+        // Creating timer
+        new Timer().scheduleAtFixedRate(new TimerTask() {
+            public void run() {
+                runOnUiThread( new Runnable() {
+                    public void run() {
+                        changeColor();
+                    }
+                });
+            };
+        },0, 4500 );
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,6 +164,40 @@ public class RegistrationMainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void changeColor(){
+
+        // Get Elements
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final LinearLayout container = (LinearLayout) findViewById(R.id.container);
+        final AppBarLayout actionBarXX = (AppBarLayout) findViewById(R.id.actionBarXX);
+
+        // Set colors
+        int newColor = ColorGenerator.getColor();
+
+        System.out.println("####################### New Color: ");
+        System.out.println(newColor);
+
+        // Get old color
+        int currentColor = ( (ColorDrawable) toolbar.getBackground() ).getColor();
+
+        System.out.println("####################### Old Color: ");
+        System.out.println(currentColor);
+
+        ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), currentColor, newColor);
+        colorAnimation.setDuration(4000); // milliseconds
+        colorAnimation.setInterpolator( new AccelerateInterpolator(1.0F) );
+        colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animator) {
+                container.setBackgroundColor((int) animator.getAnimatedValue());
+                toolbar.setBackgroundColor((int) animator.getAnimatedValue());
+                actionBarXX.setBackgroundColor((int) animator.getAnimatedValue());
+            }
+
+        });
+        colorAnimation.start();
     }
 
 }
