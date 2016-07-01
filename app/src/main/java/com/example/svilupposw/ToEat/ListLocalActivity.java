@@ -1,23 +1,33 @@
 package com.example.svilupposw.ToEat;
 
+import android.animation.ArgbEvaluator;
+import android.animation.ValueAnimator;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.content.Intent;
 import android.util.Log;
+import android.view.animation.AccelerateInterpolator;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.FirebaseError;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ListLocalActivity extends AppCompatActivity {
 
@@ -32,6 +42,20 @@ public class ListLocalActivity extends AppCompatActivity {
         ImageButton logoutButton = (ImageButton) findViewById(R.id.logout);
         homeButton.setEnabled(false);
         homeButton.setColorFilter(Color.parseColor("#B7B2B0"), PorterDuff.Mode.MULTIPLY);
+
+        // Creating timer Color Backgorund
+        new Timer().scheduleAtFixedRate(new TimerTask() {
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        changeColor();
+                    }
+                });
+            }
+
+            ;
+        }, 0, 4500);
+
 
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,6 +147,33 @@ public class ListLocalActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+    public void changeColor(){
+
+        // Get Elements
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final LinearLayout container = (LinearLayout) findViewById(R.id.container);
+        final AppBarLayout actionBarXX = (AppBarLayout) findViewById(R.id.actionBarXX);
+
+        // Set colors
+        int newColor = ColorGenerator.getColor();
+
+        // Get old color
+        int currentColor = ( (ColorDrawable) toolbar.getBackground() ).getColor();
+
+        ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), currentColor, newColor);
+        colorAnimation.setDuration(4000); // milliseconds
+        colorAnimation.setInterpolator( new AccelerateInterpolator(1.0F) );
+        colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animator) {
+                container.setBackgroundColor((int) animator.getAnimatedValue());
+                toolbar.setBackgroundColor((int) animator.getAnimatedValue());
+                actionBarXX.setBackgroundColor((int) animator.getAnimatedValue());
+            }
+
+        });
+        colorAnimation.start();
     }
 
 }

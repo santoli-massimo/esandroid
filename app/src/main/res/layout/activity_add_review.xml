@@ -18,7 +18,8 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:titleTextAppearance="@style/ToolbarTitle">
+            app:titleTextAppearance="@style/ToolbarTitle"
+            >
 
             <ImageButton
                 android:layout_width="wrap_content"

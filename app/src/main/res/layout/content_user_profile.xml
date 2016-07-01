@@ -9,7 +9,9 @@
     tools:context=".UserProfileActivity"
     tools:showIn="@layout/activity_user_profile"
     android:background="#446aca"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:id="@+id/container"
+    >
 
     <LinearLayout
         android:orientation="vertical"

@@ -10,7 +10,9 @@
     android:orientation="vertical"
     android:background="#446aca"
     tools:context=".ListLocalActivity"
-    tools:showIn="@layout/activity_list_local">
+    tools:showIn="@layout/activity_list_local"
+    android:id="@+id/container"
+    >
 
     <ListView
         android:layout_width="match_parent"

@@ -6,7 +6,7 @@ import com.firebase.client.Firebase;
 
 public class MyApplication extends Application {
 
-    private static final String FIREBASE_URL = "https://toeat-23cec.firebaseio.com/";
+    private static final String FIREBASE_URL = "https://pappa2.firebaseio.com/";
     private static Firebase myFirebaseRef;
 
     private static String myUid;

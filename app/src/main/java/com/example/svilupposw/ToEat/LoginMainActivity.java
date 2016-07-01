@@ -9,6 +9,7 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
@@ -32,6 +33,8 @@ public class LoginMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Firebase.setAndroidContext(this);
+
         setContentView(R.layout.activity_login_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -58,14 +61,14 @@ public class LoginMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Firebase ref = MyApplication.getMyFirebaseRef();
-
+        Log.i("fab", "ok");
                 ref.authWithPassword(mail.getText().toString(), pwd.getText().toString(), new Firebase.AuthResultHandler() {
                     @Override
                     public void onAuthenticated(AuthData authData) {
 
                         MyApplication.setMyUid(authData.getUid());
                         MyApplication.setMail(authData.getProviderData().get("email").toString());
-
+                        Log.i("onAuthenticated", "ok");
                         MyApplication.getUserRefByKey(authData.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -82,6 +85,7 @@ public class LoginMainActivity extends AppCompatActivity {
 
                             @Override
                             public void onCancelled(FirebaseError firebaseError) {
+                                Log.i("Login", "###########################à Firebase Error");
 
                             }
                         });
@@ -93,6 +97,7 @@ public class LoginMainActivity extends AppCompatActivity {
 
                         Toast.makeText(getApplicationContext(), getApplicationContext().getResources().getString(R.string.InvalidLogin),
                                 Toast.LENGTH_LONG).show();
+                        Log.i("Login", firebaseError.getMessage());
                     }
 
                 });

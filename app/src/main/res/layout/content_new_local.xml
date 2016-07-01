@@ -13,7 +13,9 @@
     tools:context="com.example.svilupposw.ToEat.NewLocalActivity"
     tools:showIn="@layout/activity_new_local"
     android:weightSum="1"
-    android:background="#446aca">
+    android:background="#446aca"
+    android:id="@+id/container"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
