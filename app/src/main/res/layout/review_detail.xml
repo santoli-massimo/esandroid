@@ -6,7 +6,9 @@
     android:orientation="vertical"
     tools:context=".ReviewDetailActivity"
     android:background="#446aca"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:id="@+id/container"
+    >
 
     <include
         android:id="@+id/toolbar"

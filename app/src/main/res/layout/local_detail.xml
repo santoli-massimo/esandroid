@@ -6,7 +6,9 @@
     android:orientation="vertical"
     tools:context="com.example.svilupposw.ToEat.LocalDetailActivity"
     android:background="#446aca"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:id="@+id/container"
+    >
 
     <include
         android:id="@+id/toolbar"
@@ -24,7 +26,7 @@
             android:id="@+id/localName"
             android:layout_gravity="center_horizontal"
             android:textSize="25dp"
-            android:textColor="#fb9803"
+            android:textColor="#ffffff"
             android:hint="localName"
             android:textStyle="bold"
             android:enabled="false"
@@ -37,7 +39,7 @@
             android:id="@+id/localType"
             android:layout_gravity="center_horizontal"
             android:textSize="20dp"
-            android:textColor="#fb9803"
+            android:textColor="#ffffff"
             android:hint="type"
             android:gravity="center_vertical|center_horizontal" />
 
@@ -159,7 +161,7 @@
             android:text="@string/reviews"
             android:id="@+id/textView8"
             android:layout_gravity="center_horizontal"
-            android:textColor="#fb9803"
+            android:textColor="#ffffff"
             android:textStyle="bold"
             android:textAlignment="center" />
 
@@ -185,13 +187,13 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/addReview"
         android:id="@+id/addReview"
         android:layout_gravity="bottom|right"
-        android:drawableLeft="@mipmap/star"
-        android:background="#060e54"
-        android:textColor="#ffd500"
-        android:layout_marginRight="5dp" />
+        android:drawableLeft="@android:drawable/ic_menu_add"
+        android:background="#00ffffff"
+        android:textColor="#ffffff"
+        android:layout_marginRight="5dp"
+        android:text="Nuova Recensione" />
 
 
 </LinearLayout>

@@ -39,10 +39,11 @@
             android:id="@+id/name"
             android:layout_weight="0.05"
             android:hint="@string/name"
-            android:background="#c5e1ed"
+            android:background="#ffffff"
             android:textColor="#000000"
             android:layout_marginTop="10dp"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:paddingLeft="15dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -50,10 +51,11 @@
             android:id="@+id/address"
             android:layout_weight="0.05"
             android:hint="@string/address"
-            android:background="#c5e1ed"
+            android:background="#ffffff"
             android:textColor="#000000"
             android:layout_marginTop="10dp"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:paddingLeft="15dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -61,10 +63,11 @@
             android:id="@+id/type"
             android:layout_weight="0.05"
             android:hint="@string/type"
-            android:background="#c5e1ed"
+            android:background="#ffffff"
             android:textColor="#000000"
             android:layout_marginTop="10dp"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:paddingLeft="15dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -72,10 +75,11 @@
             android:id="@+id/money"
             android:layout_weight="0.05"
             android:hint="@string/money"
-            android:background="#c5e1ed"
+            android:background="#ffffff"
             android:textColor="#000000"
             android:layout_marginTop="10dp"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:paddingLeft="15dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -83,10 +87,11 @@
             android:id="@+id/contact"
             android:layout_weight="0.05"
             android:hint="@string/contact"
-            android:background="#c5e1ed"
+            android:background="#ffffff"
             android:textColor="#000000"
             android:layout_marginTop="10dp"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:paddingLeft="15dp" />
 
         <EditText
             android:layout_width="match_parent"
@@ -94,10 +99,11 @@
             android:id="@+id/hours"
             android:layout_weight="0.05"
             android:hint="@string/hours"
-            android:background="#c5e1ed"
+            android:background="#ffffff"
             android:textColor="#000000"
             android:layout_marginTop="10dp"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:paddingLeft="15dp" />
 
     </LinearLayout>
 

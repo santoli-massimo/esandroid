@@ -18,7 +18,9 @@
         android:layout_width="match_parent"
         android:layout_height="480dp"
         android:id="@+id/listLocal"
-        android:textAlignment="textStart">
+        android:textAlignment="textStart"
+        android:cacheColorHint="#ffffff"
+        >
 
     </ListView>
 

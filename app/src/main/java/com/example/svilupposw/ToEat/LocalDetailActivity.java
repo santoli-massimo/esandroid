@@ -174,7 +174,7 @@ public class LocalDetailActivity extends AppCompatActivity {
         // Get Elements
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         final LinearLayout container = (LinearLayout) findViewById(R.id.container);
-        final AppBarLayout actionBarXX = (AppBarLayout) findViewById(R.id.actionBarXX);
+//        final AppBarLayout actionBarXX = (AppBarLayout) findViewById(R.id.actionBarXX);
 
         // Set colors
         int newColor = ColorGenerator.getColor();
@@ -190,7 +190,7 @@ public class LocalDetailActivity extends AppCompatActivity {
             public void onAnimationUpdate(ValueAnimator animator) {
                 container.setBackgroundColor((int) animator.getAnimatedValue());
                 toolbar.setBackgroundColor((int) animator.getAnimatedValue());
-                actionBarXX.setBackgroundColor((int) animator.getAnimatedValue());
+//                actionBarXX.setBackgroundColor((int) animator.getAnimatedValue());
             }
 
         });

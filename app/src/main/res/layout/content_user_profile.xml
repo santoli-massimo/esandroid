@@ -25,12 +25,15 @@
             android:id="@+id/nameText"
             android:layout_gravity="center_horizontal"
             android:textSize="25dp"
-            android:textColor="#fb9803"
+            android:textColor="#ffffff"
             android:hint="userName"
             android:textStyle="bold"
             android:enabled="false"
             android:gravity="center_vertical|center_horizontal"
-            android:height="25dp" />
+            android:height="25dp"
+            android:textColorHighlight="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textColorLink="#ffffff" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -51,7 +54,12 @@
                     android:text="@string/userMail"
                     android:id="@+id/emailLabel"
                     android:textStyle="bold"
-                    android:layout_marginLeft="15dp" />
+                    android:layout_marginLeft="15dp"
+                    android:textColorHighlight="#ffffff"
+                    android:textColorHint="#ffffff"
+                    android:textColorLink="#ffffff"
+                    android:textColor="#ffffff"
+                    android:textIsSelectable="true" />
 
                 <!--<TextView
                     android:layout_width="wrap_content"
@@ -76,12 +84,15 @@
                     android:id="@+id/emailText"
                     android:layout_gravity="center_horizontal"
                     android:textSize="15dp"
-                    android:textColor="#000000"
+                    android:textColor="#ffffff"
                     android:hint="email"
                     android:layout_marginTop="3dp"
                     android:textAlignment="textStart"
                     android:gravity="start"
-                    android:layout_marginLeft="10dp" />
+                    android:layout_marginLeft="10dp"
+                    android:textColorHighlight="#ffffff"
+                    android:textColorHint="#ffffff"
+                    android:textColorLink="#ffffff" />
 
                 <!--<TextView
                     android:layout_width="244dp"
